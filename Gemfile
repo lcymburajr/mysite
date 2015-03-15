@@ -7,7 +7,6 @@ gem 'rails', '4.2.0.beta2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'rails_12factor', group: :production
-gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'compass-rails', '~> 2.0.4'
