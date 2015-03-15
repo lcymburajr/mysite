@@ -1,0 +1,40 @@
+{
+	"projects": {
+		"website1": {
+			"title": "SOME SITE",
+			"description": "This was the greatest site ever",
+			"url": "http://www.ljcdesign.com",
+			"image": "projects/177_thumb.jpg"
+		},
+		"website2": {
+			"title": "OTHER NAME",
+			"description": "Blah blah blah",
+			"url": "http://www.ljcdesign.com",
+			"image": "projects/cbcdesign.jpg"
+		},
+		"website3": {
+			"title": "web the web",
+			"description": "weeeeeeeeeeee!",
+			"url": "http://www.ljcdesign.com",
+			"image": "projects/dingeeDesign.jpg"
+		},
+		"website4": {
+			"title": "web4",
+			"description": "",
+			"url": "http://www.ljcdesign.com",
+			"image": "projects/emailThumb.jpg"
+		},
+		"website5": {
+			"title": "web5",
+			"description": "",
+			"url": "http://www.ljcdesign.com",
+			"image": "projects/flashrock.jpg"
+		},
+		"website6": {
+			"title": "web6",
+			"description": "",
+			"url": "http://www.ljcdesign.com",
+			"image": "projects/industrialThumb.jpg"
+		}
+	}
+}

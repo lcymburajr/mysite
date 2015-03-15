@@ -1,0 +1,18 @@
+@import "compass/css3";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background: image-url("site_background.jpg") no-repeat center fixed;
+	@include background-size(cover);
+}
+
+.scroll-top {
+	display: none;
+	cursor: pointer;
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	right: 15px;
+	color: white;
+}
