@@ -20,7 +20,7 @@ class HomeController < ApplicationController
           redirect_to root_path
           flash[:notice] = 'Thank you for your message!'
         else
-          redirect_to root_path
+          redirect_to '/'
         end
       rescue ScriptError
         flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'
