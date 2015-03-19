@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<h1>DEVELOPER</h1>
-				<h2>~ LAWRENCE J CYMBURA JR ~</h2>
+				<h2>LAWRENCE J CYMBURA JR</h2>
 				<div class="scoll-down"></div>
 			</div>
 		</div>
@@ -25,8 +25,7 @@
 				<p>sass, JQUERY, TWIG, KLEIN, RAILS, NODE, ANGULAR, METEOR</p>
 				<h2>KNOWLEDGE</h2>
 				<p>GIT, PHOTOSHOP, SEO, UX, IA</p>
-				<!-- Indicates a successful or positive action -->
-				<button type="button" class="btn btn-success">Success</button>
+				<button type="button" class="btn green_bg">Success</button>
 			</div>
 		</div>
 	</div>
@@ -52,15 +51,32 @@
 <div id="contact" class="contact-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<h2>CONTACT</h2>
-				<%= form_tag do %>
-				  Form contents
-				<% end %>
-			</div>
+			<div class="col-sm-6">
+			<h2>CONTACT</h2>
+		    <%= form_for @contact_form, url: {action: 'create'}, html: {:novalidate => true, id: 'my-form'} do |f| %>
+            <div class="form-group">
+                <%= f.text_field :name, class: 'form-control', placeholder: 'Your Name' %>
+            </div>
+            <div class="form-group">
+               <%= f.email_field :email, class: 'form-control', placeholder: 'Your Email Address' %>
+            </div>
+            <div class="form-group">
+               <%= f.text_area :message, class: 'form-control', rows: 4, placeholder: 'Comments...' %>
+            </div>
+           	   <%= f.submit :submit, class: 'btn green-bg' %>
+      	    <% end %>
+		    </div>
+		     <div class="col-sm-6 info">
+		     	<p>EMAIL: <%= mail_to 'lcymburajr@ljcdesign.com', 'lcymburajr@ljcdesign.com', class: 'green' %></p>
+		     	<p>PHONE: </strong><span class="green">603-557-2917</span></p>
+		     	<%= link_to(image_tag('linkedin.png', class: 'linkedin'),'https://www.linkedin.com/pub/lawrence-j-cymbura-jr/44/876/38a') %>
+		     </div>
 		</div>
 	</div>
 </div>
 
-<div class="scroll-top"><p>TOP</p></div>
+<% if flash[:notice] %>
+	<%= render 'shared/thankyou_modals' %>
+<% end %>
+
 <%= render 'shared/modals' %>

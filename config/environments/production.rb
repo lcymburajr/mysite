@@ -20,6 +20,13 @@ Rails.application.configure do
   # NGINX, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      =>  587,
+    :user_name =>  ENV["MANDRILL_USERNAME"],
+    :password  =>  ENV["MANDRILL_API_KEY"]
+  }
+
   # Disable Rails's static asset server (Apache or NGINX will already do this).
   config.serve_static_assets = true
 
