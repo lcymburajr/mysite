@@ -17,7 +17,7 @@ class HomeController < ApplicationController
         @contact_form = ContactForm.new(params[:contact_form])
         @contact_form.request = request
         if @contact_form.deliver
-          redirect_to root_path
+          redirect_to '/'
           flash[:notice] = 'Thank you for your message!'
         else
           redirect_to '/'
