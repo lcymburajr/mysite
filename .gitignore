@@ -12,3 +12,4 @@
 /tmp
 
 application.yml
+.env
