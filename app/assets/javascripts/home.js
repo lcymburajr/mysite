@@ -77,5 +77,8 @@ $(document).ready(function(){
 	});
 
 	$('#myModal2').modal('show');
+});
+
+$(window).load(function(){
 
 });
