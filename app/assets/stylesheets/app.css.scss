@@ -3,8 +3,8 @@
 @import "bootstrap";
 
 body {
-	background: image-url("site_background.jpg") no-repeat center fixed;
-	@include background-size(cover);
+	/*background: image-url("site_background.jpg") no-repeat center fixed;
+	@include background-size(cover);*/
 }
 
 .scroll-top {
