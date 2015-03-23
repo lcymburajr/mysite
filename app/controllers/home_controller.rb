@@ -1,8 +1,10 @@
 class HomeController < ApplicationController
   def index
-  	file = File.read('public/projects.json')
-  	data = JSON.parse(file)
-  	@projects = data['projects']
+  	# file = File.read('public/projects.json')
+  	# data = JSON.parse(file)
+  	# @projects = data['projects']
+
+    @Projects = Project.all
 
   	@time = Time.new
   	@contact_form = ContactForm.new

@@ -32,8 +32,10 @@ gem 'autoprefixer-rails'
 gem 'mail_form', '~> 1.5.0'
 gem 'figaro', '~> 1.1.0'
 
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

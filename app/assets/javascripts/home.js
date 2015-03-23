@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$.backstretch("site_background.jpg");
+
 
 	$(window).on('scroll', function(){
 		var sHight = $(window).scrollTop();

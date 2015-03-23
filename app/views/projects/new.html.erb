@@ -1,0 +1,11 @@
+<h1>Projects#new</h1>
+<p>Find me in app/views/projects/new.html.erb</p>
+
+<%= link_to 'Projects', projects_path %>
+<%= form_for @project, html: { multipart: true } do |f| %>
+  <%= f.text_field :title, placeholder: "title" %></br></br>
+  <%= f.text_field :description, placeholder: "description" %></br></br>
+  <%= f.file_field :image %></br></br>
+  <%= f.text_field :link, placeholder: "link" %></br></br>
+  <%= f.submit :submit %>
+<% end %>
