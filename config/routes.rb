@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+
+  get '/abouts' => 'abouts#index'
+
+  resources :abouts
+
   get '/projects' => 'projects#index'
 
   resources :projects

@@ -7,14 +7,25 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" data-link="#home" href><%= image_tag('ljc_logo.png', class: "ljc-logo") %></a>
+	      <% if logged_in? && @active_nav == false  || !logged_in? && @active_nav == false %>
+	      	<a class="navbar-brand" href="/"><%= image_tag('ljc_logo.png', class: "ljc-logo") %></a>
+	      <% else%>
+	      	<a class="navbar-brand" data-link="#home" href><%= image_tag('ljc_logo.png', class: "ljc-logo") %></a>
+	      <% end %>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="navbar-collapse">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a data-link="#about" href>ABOUT</a></li>
-	        <li><a data-link="#project" href>PROJECTS</a></li>
-	        <li><a data-link="#contact" href>CONTACT</a></li>
+	        <% if logged_in? %>
+	        	<li><a href="/abouts">ABOUT</a></li>
+		        <li><a href="/projects">PROJECTS</a></li>
+					  <li><%= link_to "LOG OUT", logout_path, method: :delete %></li>
+					<% end %>
+					<% if @active_nav == true && !logged_in? %>
+					  <li><a data-link="#about" href>ABOUT</a></li>
+		        <li><a data-link="#project" href>PROJECTS</a></li>
+		        <li><a data-link="#contact" href>CONTACT</a></li>
+					<% end %>
 	      </ul>
 	    </div>
 	</div>

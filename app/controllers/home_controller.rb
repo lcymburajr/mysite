@@ -6,6 +6,12 @@ class HomeController < ApplicationController
 
     @Projects = Project.all
 
+    @about = About.first
+
+    @lang = About.find(2)
+
+    @active_nav = true
+
   	@time = Time.new
   	@contact_form = ContactForm.new
   end

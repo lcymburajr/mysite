@@ -1,0 +1,13 @@
+<h1>About#edit</h1>
+<p>Find me in app/views/about/edit.html.erb</p>
+
+<%= link_to 'About', abouts_path %>
+
+<%= form_for @about do |f| %>
+  <%= f.text_field :title, placeholder: "title" %></br></br>
+  <%= f.text_area :description, placeholder: "description" %></br></br>
+  <%= f.text_area :second_description, placeholder: "Another description" %></br></br>
+  <%= f.submit :submit %>
+<% end %>
+
+<%= link_to "delete", :about, method: :delete, data: { confirm: "You sure?" } %>

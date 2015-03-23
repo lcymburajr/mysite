@@ -4,9 +4,3 @@
 <%= link_to 'Projects', projects_path %>
 <h3><%= @project.title %></h3>
 <%= image_tag(@project.image.url(:large)) %>
-
-<% if logged_in? %>
-  <%= link_to "Log out", logout_path, method: :delete %>
-<% else %>
-  # Links for non-logged-in-users
-<% end %>

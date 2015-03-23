@@ -1,56 +1,56 @@
-class ProjectsController < ApplicationController
+class AboutsController < ApplicationController
   before_filter :require_login
 
   def index
-    @project = Project.all
+    @about = About.all
     @active_nav = false
   end
 
   def show
-    @project = Project.find(params[:id])
+    @about = About.find(params[:id])
     @active_nav = false
   end
 
   def new
-    @project = Project.new
+    @about = About.new
     @active_nav = false
   end
 
   def create
-    @project = Project.new(project_params)
-    if @project.save
+    @about = About.new(about_params)
+    if @about.save
       flash[:notice] = "success!"
-      redirect_to @project
+      redirect_to @about
     else
       render :new
     end
   end
 
   def edit
-    @project = Project.find(params[:id])
+    @about = About.find(params[:id])
     @active_nav = false
   end
 
   def update
-    @project = Project.find(params[:id])
-    if @project.update_attributes(project_params)
+    @about = About.find(params[:id])
+    if @about.update_attributes(about_params)
       flash[:notice] = "Profile updated"
-      redirect_to @project
+      redirect_to @about
     else
       render :edit
     end
   end
 
   def destroy
-    Project.find(params[:id]).destroy
+    About.find(params[:id]).destroy
     flash[:notice] = "site deleted"
-    redirect_to projects_path
+    redirect_to abouts_path
   end
 
   private
 
-    def project_params
-      params.require(:project).permit(:title, :description, :image, :link)
+    def about_params
+      params.require(:about).permit(:title, :description, :second_description)
     end
 
     def require_login

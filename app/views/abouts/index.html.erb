@@ -1,0 +1,14 @@
+<h1>abouts#index</h1>
+<p>Find me in app/views/abouts/index.html.erb</p>
+
+<%= link_to 'add new', new_about_path %>
+
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+<ul>
+  <% @about.each do |a| %>
+    <li><h2><%= link_to(a.title, edit_about_path(a.id)) %></h2></li>
+  <% end %>
+</ul>
