@@ -3,19 +3,22 @@
 .home-section {
 	width: 100%;
 	padding: 200px 0 500px 0;
+	@media screen and(max-width: 350px) {
+		padding-top: 150px;
+	}
 	h1 {
 		margin-top: 0;
 		margin-bottom: 5px;
 		font-size: 100px;
 		@media screen and(max-width: 500px) {
-			font-size: 54px;
+			font-size: 58px;
 		}
 	}
 	h2 {
 		margin-top: 0;
 		font-family: 'Roboto', sans-serif;
 		@media screen and(max-width: 500px) {
-			font-size: 18px;
+			font-size: 16px;
 		}
 	}
 	.scoll-down {
@@ -48,6 +51,10 @@
 .about-section {
 	width: 100%;
 	padding: 50px 0 50px 0;
+	@media screen and(max-width: 768px) {
+		padding-top: 10px;
+		padding-bottom: 40px;
+	}
 	background: rgba(255, 255, 255, 0.5);
 	h2 {
 		font-size: 42px;
@@ -57,6 +64,9 @@
 	}
 	.skills {
 		padding-top: 55px;
+		@media screen and(max-width: 768px) {
+			padding-top: 10px;
+		}
 		.btn {
 			margin-top: 10px;
 		}
@@ -66,6 +76,10 @@
 .project-section {
 	width: 100%;
 	padding: 50px 0 100px 0;
+	@media screen and(max-width: 768px) {
+		padding-top: 10px;
+		padding-bottom: 30px;
+	}
 	@media screen and(max-width: 475px) {
 		text-align: center;
 	}
@@ -96,6 +110,10 @@
 	height: 600px;
 	background: rgba(0, 0, 0, 0.8);
 	padding: 50px 0 50px 0;
+	@media screen and(max-width: 768px) {
+		padding-top: 10px;
+		padding-bottom: 0px;
+	}
 	h2 {
 		font-size: 42px;
 		color: white;
@@ -117,6 +135,9 @@
 	}
 	textarea {
 		 resize: none;
+	}
+	.nickname {
+		display: none;
 	}
 }
 
@@ -144,6 +165,9 @@
 .green {
 		color: #acd255;
 		&:hover {
+			color: #acd255;
+		}
+		&:visited {
 			color: #acd255;
 		}
 	}

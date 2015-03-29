@@ -39,6 +39,7 @@ $(document).ready(function(){
 		var name = $('#contact_form_name').val();
 		var email = $('#contact_form_email').val();
 		var message = $('#contact_form_message').val();
+		var nickname = $('#contact_form_nickname').val();
 
 		var regEx = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 		var emailValidate = regEx.test(email);
@@ -71,7 +72,11 @@ $(document).ready(function(){
 			$('#contact_form_message').removeClass('error');
 		}
 
-		if(sendName && sendEmail && sendMessage){
+		if(nickname.length == 0){
+			var send = true;
+		}
+
+		if(sendName && sendEmail && sendMessage && send){
 			// submit form
 		}else {
 			event.preventDefault();

@@ -74,15 +74,19 @@
 			<h2>CONTACT</h2>
 		    <%= form_for @contact_form, url: {action: 'create'}, html: {:novalidate => true, id: 'my-form'} do |f| %>
             <div class="form-group">
-                <%= f.text_field :name, class: 'form-control', placeholder: 'Your Name' %>
+                <%= f.text_field :name, class: 'form-control', placeholder: 'NAME' %>
             </div>
             <div class="form-group">
-               <%= f.email_field :email, class: 'form-control', placeholder: 'Your Email Address' %>
+               <%= f.email_field :email, class: 'form-control', placeholder: 'EMAIL' %>
             </div>
             <div class="form-group">
-               <%= f.text_area :message, class: 'form-control', rows: 4, placeholder: 'Comments...' %>
+               <%= f.text_area :message, class: 'form-control', rows: 4, placeholder: 'MESSAGE' %>
             </div>
-           	   <%= f.submit :submit, class: 'btn green-bg' %>
+            <div class="form-group nickname">
+            		<p> Please leave this blank. </p>
+               <%= f.email_field :nickname, class: 'form-control' %>
+            </div>
+           	   <%= f.submit 'SUBMIT', class: 'btn green-bg' %>
       	    <% end %>
 		    </div>
 		     <div class="col-sm-6 info">
@@ -102,7 +106,8 @@
 <%= render 'shared/modals' %>
 
 <script>
-	$(document).ready(function(){
+	$(window).load(function(){
 		$.backstretch("site_background.jpg");
+		$('body').css('background', '#000');
 	});
 </script>
