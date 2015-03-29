@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-
-
 	$(window).on('scroll', function(){
 		var sHight = $(window).scrollTop();
 		if (sHight > 300) {
@@ -18,6 +16,7 @@ $(document).ready(function(){
 	});
 
 	$('.scroll-top').click(function(){
+		$('.nav-links').removeClass('active-nav');
 		$('html,body').animate({
 	    	scrollTop: 0
 	 	}, 1000);
@@ -30,7 +29,10 @@ $(document).ready(function(){
 		var url = $(this).attr('data-url');
 		$('.modal-title').text(title);
 		$('.modal-body p').text(description);
-		$('.modal-footer a').attr('href', url);
+		if( url.length !== 0){
+			$('.modal-footer a').attr('href', url);
+			$('.site-link').show();
+		}
 	});
 
 	$('#my-form').on('submit', function(event){

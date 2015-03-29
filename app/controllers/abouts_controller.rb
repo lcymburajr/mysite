@@ -34,7 +34,7 @@ class AboutsController < ApplicationController
   def update
     @about = About.find(params[:id])
     if @about.update_attributes(about_params)
-      flash[:notice] = "Profile updated"
+      flash[:notice] = "Profile Updated!"
       redirect_to @about
     else
       render :edit
@@ -43,14 +43,14 @@ class AboutsController < ApplicationController
 
   def destroy
     About.find(params[:id]).destroy
-    flash[:notice] = "site deleted"
+    flash[:notice] = "About Deleted!"
     redirect_to abouts_path
   end
 
   private
 
     def about_params
-      params.require(:about).permit(:title, :description, :second_description)
+      params.require(:about).permit(:title, :description, :second_description, :document)
     end
 
     def require_login

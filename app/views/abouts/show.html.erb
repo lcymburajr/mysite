@@ -1,7 +1,9 @@
-<h1>About#show</h1>
-<p>Find me in app/views/abouts/show.html.erb</p>
-
-<%= link_to 'About', abouts_path %>
-<h3><%= @about.title %></h3>
-<p><%= @about.description %></p>
-<p><%= @about.second_description %></p>
+<div class="container back-end">
+  <div class="row">
+    <div class="col-md-12">
+      <h2><%= @about.title %></h2>
+      <p><%= @about.description %></p>
+      <p><%= @about.second_description %></p>
+    </div>
+  </div>
+</div>

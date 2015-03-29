@@ -1,14 +1,27 @@
-<h1>Projects#edit</h1>
-<p>Find me in app/views/projects/edit.html.erb</p>
-
-<%= form_for @project, html: { multipart: true } do |f| %>
-  <%= f.text_field :title, placeholder: "title" %></br></br>
-  <%= f.text_field :description, placeholder: "description" %></br></br>
-  <%= f.file_field :image %></br></br>
-  <%= f.text_field :link, placeholder: "link" %></br></br>
-  <%= f.submit "Save" %>
-<% end %>
-
-</br>
-</br>
-<%= link_to "delete", :project, method: :delete, data: { confirm: "You sure?" } %>
+<div class="container back-end">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+      <h2>Edit Project</h2>
+      <%= form_for @project, html: { multipart: true } do |f| %>
+        <div class="form-group">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %>
+          <%= f.text_area :description, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :image %>
+          <%= f.file_field :image %>
+        </div>
+        <div class="form-group">
+          <%= f.label :link %>
+          <%= f.text_field :link, class: 'form-control' %>
+        </div>
+        <%= f.submit "Save", class: "btn btn-primary" %>
+        <%= link_to "Delete", :project, method: :delete, data: { confirm: "You sure?" }, class: "pull-right" %>
+      <% end %>
+    </div>
+  </div>
+</div>

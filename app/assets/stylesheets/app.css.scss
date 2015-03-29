@@ -2,9 +2,34 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-	/*background: image-url("site_background.jpg") no-repeat center fixed;
-	@include background-size(cover);*/
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -40px;
+}
+
+.push {
+	height: 40px;
+}
+
+.footer {
+	height: 40px;
+	background: #000;
+	p {
+		margin-top: 12px;
+		font-size: 12px;
+		color: white;
+	}
 }
 
 .scroll-top {
@@ -21,4 +46,12 @@ body {
 		margin-bottom: 0;
 		color: white;
 	}
+}
+
+.site-link {
+	display: none;
+}
+
+.back-end {
+	margin-top: 100px;
 }

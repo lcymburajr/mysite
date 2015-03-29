@@ -2,9 +2,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<!-- <h1>DEVELOPER</h1>
-				<h2>LAWRENCE J CYMBURA JR</h2> -->
-				<a data-link="#about" href><div class="scoll-down"></div></a>
+				<h1>DEVELOPER</h1>
+				<h2>LAWRENCE J CYMBURA JR</h2>
+				<a class="nav-links" data-link="#about" href><div class="scoll-down"></div></a>
 			</div>
 		</div>
 	</div>
@@ -14,24 +14,28 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<!-- <h2>ABOUT</h2>
-				<p>I have over ten years experience working as a commercial photographer. During this period, I’ve learned the value of hard work as well as a massive amount of technical information on both equipment and software. My work in the field of photography helped me to discover an interest in graphic design. This interest inspired me to earn a degree in design and begin work as a freelance graphic designer. My various freelance projects got me interested in web development, so I went back to school to immerse myself in that field as well.</p>
-				<p>I consider myself a problem solver and web development gives me the satisfaction of overcoming challenges and developing creative solutions.</p> -->
-				<%# @about.each do |a| %>
+				<% if !@about.nil? %>
 					<h2><%= @about.title %></h2>
 					<p><%= @about.description %></p>
-				<%# end %>
+					<p><%= @about.second_description %></p>
+				<% end %>
 			</div>
-			<div class="col-md-6">
-				<h2><%= @lang.title %></h2>
-				<p><%= @lang.description %></p>
-				<!-- <h2>LANGAUGES</h2>
-				<p>HTLM5, CSS3, JAVASCRIPT, PHP, RUBY</p> -->
-				<h2>FRAMWORKS</h2>
-				<p>sass, JQUERY, TWIG, KLEIN, RAILS, NODE, ANGULAR, METEOR</p>
-				<h2>KNOWLEDGE</h2>
-				<p>GIT, PHOTOSHOP, SEO, UX, IA</p>
-				<button type="button" class="btn green_bg">Success</button>
+			<div class="skills col-md-6">
+				<% if !@languages.nil? %>
+					<h3><%= @languages.title %></h3>
+					<p><%= @languages.description %></p>
+				<% end %>
+				<% if !@frameworks.nil? %>
+					<h3><%= @frameworks.title %></h3>
+					<p><%= @frameworks.description %></p>
+				<% end %>
+				<% if !@knowledge.nil? %>
+					<h3><%= @knowledge.title %></h3>
+					<p><%= @knowledge.description %></p>
+				<% end %>
+				<% if !@resume.nil? %>
+					<a class="btn green-bg" href="<%= @resume.document %>" target="_blank">RESUME</a>
+				<% end %>
 			</div>
 		</div>
 	</div>
@@ -49,12 +53,14 @@
 						</div>
 					</a> -->
 				<%# end %>
-				<% @Projects.each do |project| %>
-					<a class="modal-link" href data-toggle="modal" data-target="#myModal">
-						<div data-title="<%= project.title %>" data-description="<%= project.description %>" data-url="<%= project.link %>" class="project-thumbs">
-							<%= image_tag(project.image.url(:large)) %>
-						</div>
-					</a>
+				<% if !@projects.nil? %>
+					<% @projects.each do |project| %>
+						<a class="modal-link" href data-toggle="modal" data-target="#myModal">
+							<div data-title="<%= project.title %>" data-description="<%= project.description %>" data-url="<%= project.link %>" class="project-thumbs">
+								<%= image_tag(project.image.url(:large)) %>
+							</div>
+						</a>
+					<% end %>
 				<% end %>
 			</div>
 		</div>
@@ -80,7 +86,7 @@
       	    <% end %>
 		    </div>
 		     <div class="col-sm-6 info">
-		     	<p>EMAIL: <%= mail_to 'lcymburajr@ljcdesign.com', 'lcymburajr@ljcdesign.com', class: 'green' %></p>
+		     	<p>EMAIL: <%= mail_to 'lcymburajr@ljcdesign.com', 'lcymburajr[at]ljcdesign.com', class: 'green' %></p>
 		     	<p>PHONE: </strong><span class="green">603-557-2917</span></p>
 		     	<%= link_to(image_tag('linkedin.png', class: 'linkedin'),'https://www.linkedin.com/pub/lawrence-j-cymbura-jr/44/876/38a') %>
 		     </div>
@@ -88,7 +94,7 @@
 	</div>
 </div>
 
-<% if flash[:notice] %>
+<% if flash[:success] %>
 	<%= render 'shared/thankyou_modals' %>
 <% end %>
 
@@ -97,7 +103,6 @@
 
 <script>
 	$(document).ready(function(){
-		//$.backstretch("site_background.jpg");
+		$.backstretch("site_background.jpg");
 	});
 </script>
-

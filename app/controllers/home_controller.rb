@@ -4,35 +4,39 @@ class HomeController < ApplicationController
   	# data = JSON.parse(file)
   	# @projects = data['projects']
 
-    @Projects = Project.all
+    @projects = Project.all
 
-    @about = About.first
+    @about = About.find_by_title('ABOUT')
 
-    @lang = About.find(2)
+    @languages = About.find_by_title('LANGUAGES')
+
+    @frameworks = About.find_by_title('FRAMEWORKS')
+
+    @knowledge = About.find_by_title('KNOWLEDGE')
+
+    @resume = About.find_by_title('RESUME')
 
     @active_nav = true
 
-  	@time = Time.new
   	@contact_form = ContactForm.new
   end
 
-  	def new
-      @contact_form = ContactForm.new
-    end
+	def new
+    @contact_form = ContactForm.new
+  end
 
-    def create
-      begin
-        @contact_form = ContactForm.new(params[:contact_form])
-        @contact_form.request = request
-        if @contact_form.deliver
-          redirect_to '/'
-          flash[:notice] = 'Thank you for your message!'
-        else
-          redirect_to '/'
-        end
-      rescue ScriptError
-        flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'
+  def create
+    begin
+      @contact_form = ContactForm.new(params[:contact_form])
+      @contact_form.request = request
+      if @contact_form.deliver
+        redirect_to '/'
+        flash[:success] = 'Thank you for your message!'
+      else
+        redirect_to '/'
       end
+    rescue ScriptError
+      flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'
     end
-
+  end
 end

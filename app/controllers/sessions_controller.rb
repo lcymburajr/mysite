@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-    @active_nav = false
   end
 
   def create

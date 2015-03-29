@@ -1,6 +1,8 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
-
-<%= link_to 'Projects', projects_path %>
-<h3><%= @project.title %></h3>
-<%= image_tag(@project.image.url(:large)) %>
+<div class="container back-end">
+  <div class="row">
+    <div class="col-md-12">
+      <h2><%= @project.title %></h2>
+      <%= image_tag(@project.image.url(:large)) %>
+    </div>
+  </div>
+</div>

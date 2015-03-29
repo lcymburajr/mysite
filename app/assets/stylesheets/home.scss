@@ -55,6 +55,12 @@
 	p {
 		font-size: 18px;
 	}
+	.skills {
+		padding-top: 55px;
+		.btn {
+			margin-top: 10px;
+		}
+	}
 }
 
 .project-section {
@@ -114,6 +120,20 @@
 	}
 }
 
+.modal-header {
+	border-bottom: 0;
+}
+
+#myModal2 {
+	h1 {
+		margin-bottom: 10px;
+	}
+}
+
+.modal-footer {
+	border-top: 0;
+}
+
 .error {
 	border: 1px solid red;
 	@include input-placeholder {
@@ -129,5 +149,6 @@
 	}
 
 .green-bg {
+		color: #000;
 		background: #acd255;
 	}

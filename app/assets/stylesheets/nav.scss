@@ -1,5 +1,8 @@
 .navbar-inverse .navbar-nav > li > a {
   color: #fff;
+  &.active {
+    color: #acd255 !important;
+  }
 }
 
 .navbar-brand {
@@ -10,4 +13,6 @@
 	height: 35px;
 }
 
-
+.active-nav {
+  color: #acd255 !important;
+}

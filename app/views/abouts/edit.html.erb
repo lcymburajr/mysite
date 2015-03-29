@@ -1,13 +1,27 @@
-<h1>About#edit</h1>
-<p>Find me in app/views/about/edit.html.erb</p>
-
-<%= link_to 'About', abouts_path %>
-
-<%= form_for @about do |f| %>
-  <%= f.text_field :title, placeholder: "title" %></br></br>
-  <%= f.text_area :description, placeholder: "description" %></br></br>
-  <%= f.text_area :second_description, placeholder: "Another description" %></br></br>
-  <%= f.submit :submit %>
-<% end %>
-
-<%= link_to "delete", :about, method: :delete, data: { confirm: "You sure?" } %>
+<div class="container back-end">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+      <h2>Edit About</h2>
+      <%= form_for @about do |f| %>
+        <div class="form-group">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %>
+          <%= f.text_area :description, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :second_description %>
+          <%= f.text_area :second_description, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :document %>
+          <%= f.file_field :document %>
+        </div>
+        <%= f.submit 'Save', class: "btn btn-primary" %>
+        <%= link_to "Delete", :about, method: :delete, data: { confirm: "You sure?" }, class: "pull-right" %>
+      <% end %>
+    </div>
+  </div>
+</div>
