@@ -1,0 +1,16 @@
+.ie9 {
+  a {
+    cursor: pointer;
+  }
+  .labels {
+    display: block;
+  }
+  .info {
+    margin-top: 111px;
+    @media screen and(max-width: 768px) {
+      margin-top: 30px;
+    }
+  }
+}
+
+

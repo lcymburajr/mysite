@@ -74,12 +74,15 @@
 			<h2>CONTACT</h2>
 		    <%= form_for @contact_form, url: {action: 'create'}, html: {:novalidate => true, id: 'my-form'} do |f| %>
             <div class="form-group">
+            		<%= f.label :name, class: 'labels' %>
                 <%= f.text_field :name, class: 'form-control', placeholder: 'NAME' %>
             </div>
             <div class="form-group">
+            	 <%= f.label :email, class: 'labels' %>
                <%= f.email_field :email, class: 'form-control', placeholder: 'EMAIL' %>
             </div>
             <div class="form-group">
+            	<%= f.label :message, class: 'labels' %>
                <%= f.text_area :message, class: 'form-control', rows: 4, placeholder: 'MESSAGE' %>
             </div>
             <div class="form-group nickname">
