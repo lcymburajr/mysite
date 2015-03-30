@@ -26,7 +26,9 @@
         <h4 class="modal-title" id="awardModalLabel">AWARD</h4>
       </div>
       <div class="modal-body">
-        <%= image_tag(@award.document, class: 'img-responsive') %>
+        <% if !@award.nil? %>
+          <%= image_tag(@award.document, class: 'img-responsive') %>
+        <% end %>
       </div>
     </div>
   </div>
