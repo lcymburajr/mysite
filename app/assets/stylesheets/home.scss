@@ -181,6 +181,20 @@
 	border-top: 0;
 }
 
+
+.site-link {
+	@media screen and(max-width: 475px) {
+		float: left;
+	}
+}
+
+.mobile-btn {
+	display: none;
+	@media screen and(max-width: 475px) {
+		display: block;
+	}
+}
+
 .error {
 	border: 1px solid red;
 	@include input-placeholder {

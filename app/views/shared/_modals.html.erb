@@ -3,6 +3,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title web-title" id="myModalLabel">Title</h4>
       </div>
@@ -11,7 +12,7 @@
       </div>
       <div class="modal-footer">
       	<a href class="site-link btn green-bg" target="_blank">Visit site</a>
-        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+         <button type="button" class="btn btn-default mobile-btn pull-right" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -29,6 +30,9 @@
         <% if !@award.nil? %>
           <%= image_tag(@award.document, class: 'img-responsive') %>
         <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default mobile-btn pull-right" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
