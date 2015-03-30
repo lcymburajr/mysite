@@ -13,5 +13,3 @@
 
 application.yml
 .env
-
-mysite_development.dump

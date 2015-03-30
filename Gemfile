@@ -33,8 +33,6 @@ gem 'figaro', '~> 1.1.0'
 
 gem 'paperclip'
 
-gem 'heroku', '~> 3.30.3'
-
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
