@@ -8,7 +8,7 @@ $(document).ready(function(){
 			$('.scroll-top').hide();
 		}
 
-		if (sHight > 100) {
+		if (sHight > 10) {
 			$('.scoll-down').hide();
 		} else {
 			$('.scoll-down').show();
@@ -23,14 +23,18 @@ $(document).ready(function(){
 	 	return false;
 	});
 
-	$('.modal-link div').click(function() {
+	$('.modal-link .project-thumbs').click(function() {
 		var title = $(this).attr('data-title');
 		var description = $(this).attr('data-description');
 		var url = $(this).attr('data-url');
+
 		$('.modal-title').text(title);
 		$('.modal-body p').text(description);
-		if( url.length !== 0){
-			$('.modal-footer a').attr('href', url);
+
+		if( url.length == 0){
+			$('.site-link').hide();
+		}else{
+			$('.modal-footer a').attr('href', '//' + url);
 			$('.site-link').show();
 		}
 	});
@@ -84,8 +88,4 @@ $(document).ready(function(){
 	});
 
 	$('#myModal2').modal('show');
-});
-
-$(window).load(function(){
-
 });

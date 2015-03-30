@@ -1,7 +1,7 @@
 <div id="home" class="home-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center home-content">
 				<h1>DEVELOPER</h1>
 				<h2>LAWRENCE J CYMBURA JR</h2>
 				<a class="nav-links" data-link="#about" href><div class="scoll-down"></div></a>
@@ -54,7 +54,7 @@
 					</a> -->
 				<%# end %>
 				<% if !@projects.nil? %>
-					<% @projects.each do |project| %>
+					<% @projects.order('id ASC').each do |project| %>
 						<a class="modal-link" href data-toggle="modal" data-target="#myModal">
 							<div data-title="<%= project.title %>" data-description="<%= project.description %>" data-url="<%= project.link %>" class="project-thumbs">
 								<%= image_tag(project.image.url(:large)) %>

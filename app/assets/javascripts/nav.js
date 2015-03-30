@@ -1,5 +1,9 @@
 $(window).resize(function(){
     var wWidth = $(this).width();
+
+    var wHeight = $(this).height();
+    $('.home-section').css('height', wHeight);
+
     if (wWidth < 768){
         $("#navbar-collapse").addClass('mobile');
     }else {
