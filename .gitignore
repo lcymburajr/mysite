@@ -13,3 +13,4 @@
 
 application.yml
 .env
+backup.sql
