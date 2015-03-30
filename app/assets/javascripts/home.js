@@ -23,12 +23,12 @@ $(document).ready(function(){
 	 	return false;
 	});
 
-	$('.modal-link .project-thumbs').click(function() {
+	$('.project-thumbs').click(function() {
 		var title = $(this).attr('data-title');
 		var description = $(this).attr('data-description');
 		var url = $(this).attr('data-url');
 
-		$('.modal-title').text(title);
+		$('.web-title').text(title);
 		$('.modal-body p').text(description);
 
 		if( url.length == 0){

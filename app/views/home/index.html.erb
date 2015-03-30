@@ -33,6 +33,10 @@
 					<h3><%= @knowledge.title %></h3>
 					<p><%= @knowledge.description %></p>
 				<% end %>
+				<% if !@award.nil? %>
+					<h3><%= @award.title %></h3>
+					<p><%= @award.description %> <a class="modal-link award" href data-toggle="modal" data-target="#awardModal">Click to view</a></p>
+				<% end %>
 				<% if !@resume.nil? %>
 					<a class="btn green-bg" href="<%= @resume.document %>" target="_blank">RESUME</a>
 				<% end %>

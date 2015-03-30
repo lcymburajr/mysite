@@ -14,6 +14,8 @@ class HomeController < ApplicationController
 
     @knowledge = About.find_by_title('KNOWLEDGE')
 
+    @award= About.find_by_title('AWARD')
+
     @resume = About.find_by_title('RESUME')
 
     @active_nav = true

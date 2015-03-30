@@ -145,6 +145,28 @@
 	}
 }
 
+.award {
+		color: #000;
+		&:hover {
+			color: #000;
+		}
+		&:visited {
+			color: #000;
+		}
+}
+
+#awardModal {
+	.modal-header {
+		padding-bottom: 0;
+	}
+	.modal-body{
+		padding-top: 0;
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
 .modal-header {
 	border-bottom: 0;
 }
