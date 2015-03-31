@@ -8,6 +8,6 @@ test:
   <<: *defaults
   bucket: "ljcsite"
 production:
-  access_key_id: <%=ENV["AKIAJGNRUJYVROTIJG3Q"]%>
-  secret_access_key: <%=ENV["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"]%>
+  access_key_id: <%=ENV["AWS_ACCESS_KEY_ID"]%>
+  secret_access_key: <%=ENV["AWS_SECRET_ACCESS_KEY"]%>
   bucket: "ljcsite"
