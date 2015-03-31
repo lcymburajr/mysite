@@ -20,7 +20,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     if @project.save
       flash[:notice] = "Success!"
-      redirect_to @project
+      redirect_to projects_path
     else
       render :new
     end
@@ -34,8 +34,8 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
     if @project.update_attributes(project_params)
-      flash[:notice] = "Profile Updated!"
-      redirect_to @project
+      flash[:notice] = "Updated!"
+      redirect_to projects_path
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     Project.find(params[:id]).destroy
-    flash[:notice] = "site deleted"
+    flash[:notice] = "Deleted!"
     redirect_to projects_path
   end
 

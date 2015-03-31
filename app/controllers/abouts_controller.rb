@@ -19,8 +19,8 @@ class AboutsController < ApplicationController
   def create
     @about = About.new(about_params)
     if @about.save
-      flash[:notice] = "success!"
-      redirect_to @about
+      flash[:notice] = "Success!"
+      redirect_to abouts_path
     else
       render :new
     end
@@ -34,8 +34,8 @@ class AboutsController < ApplicationController
   def update
     @about = About.find(params[:id])
     if @about.update_attributes(about_params)
-      flash[:notice] = "Profile Updated!"
-      redirect_to @about
+      flash[:notice] = "Updated!"
+      redirect_to abouts_path
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class AboutsController < ApplicationController
 
   def destroy
     About.find(params[:id]).destroy
-    flash[:notice] = "About Deleted!"
+    flash[:notice] = "Deleted!"
     redirect_to abouts_path
   end
 
