@@ -7,3 +7,7 @@ development:
 test:
   <<: *defaults
   bucket: "ljcsite"
+production:
+  access_key_id: <%=ENV["AKIAJGNRUJYVROTIJG3Q"]%>
+  secret_access_key: <%=ENV["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"]%>
+  bucket: "ljcsite"
