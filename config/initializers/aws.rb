@@ -21,8 +21,3 @@ S3DirectUpload.config do |c|
   c.bucket            = Rails.configuration.aws[:bucket]
   c.region            = "s3"
 end
-
-AWS.config(access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
-           secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'] )
-
-S3_BUCKET = AWS::S3.new.buckets[ENV['S3_BUCKET']]
