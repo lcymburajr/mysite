@@ -32,6 +32,8 @@ gem 'mail_form', '~> 1.5.0'
 gem 'figaro', '~> 1.1.0'
 
 gem 'paperclip'
+gem 'aws-sdk', '~> 1.5.7'
+gem 's3_direct_upload'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

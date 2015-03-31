@@ -35,7 +35,7 @@
 				<% end %>
 				<% if !@award.nil? %>
 					<h3><%= @award.title %></h3>
-					<p><%= @award.description %> <a class="modal-link award" href data-toggle="modal" data-target="#awardModal">Click to view</a></p>
+					<p><%= @award.description %> <a class="modal-link award" href data-toggle="modal" data-target="#awardModal"><strong>Click to view</strong></a></p>
 				<% end %>
 				<% if !@resume.nil? %>
 					<a class="btn green-bg" href="<%= @resume.document %>" target="_blank">RESUME</a>
@@ -61,7 +61,7 @@
 					<% @projects.order('id ASC').each do |project| %>
 						<a class="modal-link" href data-toggle="modal" data-target="#myModal">
 							<div data-title="<%= project.title %>" data-description="<%= project.description %>" data-url="<%= project.link %>" class="project-thumbs">
-								<%= image_tag(project.image.url(:large)) %>
+								<%= image_tag project.image.url(:large, timestamp:false) %>
 							</div>
 						</a>
 					<% end %>

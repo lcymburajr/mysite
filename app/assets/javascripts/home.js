@@ -34,7 +34,7 @@ $(document).ready(function(){
 		if( url.length == 0){
 			$('.site-link').hide();
 		}else{
-			$('.modal-footer a').attr('href', '//' + url);
+			$('.modal-footer a').attr('href', url);
 			$('.site-link').show();
 		}
 	});

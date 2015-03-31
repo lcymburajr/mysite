@@ -1,0 +1,13 @@
+defaults: &defaults
+  access_key_id: "AKIAJGNRUJYVROTIJG3Q"
+  secret_access_key: "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"
+development:
+  <<: *defaults
+  bucket: "ljcsite"
+test:
+  <<: *defaults
+  bucket: "ljcsite"
+production:
+  access_key_id: <%=ENV["AKIAJGNRUJYVROTIJG3Q"]%>
+  secret_access_key: <%=ENV["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"]%>
+  bucket: "ljcsite"

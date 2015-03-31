@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/documents' => 'documents#index'
+
   get "/" => 'home#index'
   resources :home
 
