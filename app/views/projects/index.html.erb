@@ -7,7 +7,7 @@
         <p class="flash"><%= flash[:notice] %></p>
       <% end %>
       <% @project.each do |p| %>
-        <%= link_to(image_tag(p.image.url(:large, timestamp:false)), edit_project_path(p.id)) %>
+        <%= link_to(image_tag(p.image.url(:thumb, timestamp:false)), edit_project_path(p.id)) %>
       <% end %>
     </div>
   </div>
