@@ -10,7 +10,13 @@ class Document < ActiveRecord::Base
   before_create :set_upload_attributes
   after_create :queue_processing
 
-  attr_accessible :direct_upload_url
+  attr_accessible :user_params
+
+  private
+  ## Strong Parameters
+  def user_params
+    params.require(:user).permit(:direct_upload_url)
+  end
 
   # Store an unescaped version of the escaped URL that Amazon returns from direct upload.
   def direct_upload_url=(escaped_url)
