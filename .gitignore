@@ -11,7 +11,6 @@
 /log/*.log
 /tmp
 
-application.yml
 .env
 
-aws.yml
+
