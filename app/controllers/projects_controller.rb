@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_filter :require_login
 
   def index
-    @project = Project.all.order('id ASC')
+    @project = Project.all.order('id DESC')
     @active_nav = false
   end
 

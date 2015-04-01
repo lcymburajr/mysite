@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   	# data = JSON.parse(file)
   	# @projects = data['projects']
 
-    @projects = Project.all
+    @projects = Project.all.order('id DESC')
 
     @about = About.find_by_title('ABOUT')
 

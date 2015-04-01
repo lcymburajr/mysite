@@ -58,7 +58,7 @@
 					</a> -->
 				<%# end %>
 				<% if !@projects.nil? %>
-					<% @projects.order('id ASC').each do |project| %>
+					<% @projects.each do |project| %>
 						<a class="modal-link" href data-toggle="modal" data-target="#myModal">
 							<div data-title="<%= project.title %>" data-description="<%= project.description %>" data-url="<%= project.link %>" class="project-thumbs">
 								<%= image_tag project.image.url(:thumb, timestamp:false) %>
