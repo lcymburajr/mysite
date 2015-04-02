@@ -8,9 +8,20 @@
 </div>
 
 <script>
-  $(document).ready(function(){
+  $(window).resize(function(){
+    var wWidth = $(this).width();;
+
+    if (wWidth < 500){
+        setTimeout(function() {
+          $('body').css('background', '#000');
+        }, 500);
+    }else {
+        $('body').css('background', 'none');
+    }
+  });
+
+  $(window).load(function(){
     $.backstretch("site_background.jpg");
-    $('body').css('background', '#000');
-    $('.navbar-toggle').css('display', 'none');
+    $(window).trigger('resize');
   });
 </script>
