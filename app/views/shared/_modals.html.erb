@@ -7,10 +7,12 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title web-title" id="myModalLabel">Title</h4>
       </div>
-      <div class="modal-body">
-        <p>Description</p>
+      <div class="modal-body text-center web-img">
+        <%= link_to(image_tag('', class: 'img-responsive'), '', target: "blank") %>
       </div>
       <div class="modal-footer">
+        <p class="text-center"><STRONG>ROLE:</STRONG> <span class="description">Description</span></p>
+        <p class="text-center lang"><STRONG>LANG/FRAMWORKS:</STRONG> <span class="second-description">Second_Description</span></p>
         <%= link_to('Visit site', '', target: 'blank', class: 'site-link btn green-bg') %>
          <button type="button" class="btn btn-default mobile-btn pull-right" data-dismiss="modal">Close</button>
       </div>

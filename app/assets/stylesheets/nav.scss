@@ -15,4 +15,7 @@
 
 .active-nav {
   color: #acd255 !important;
+  @media screen and(max-width: 768px) {
+    color: #fff !important;
+  }
 }

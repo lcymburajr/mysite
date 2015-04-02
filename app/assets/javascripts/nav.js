@@ -59,7 +59,7 @@ $(document).ready(function(){
        $('.project').addClass('active-nav');
     }
 
-    if( scroll_top > div_two_top + 10 ) {
+    if( scroll_top > div_two_top + 150 ) {
        $('.nav-links').removeClass('active-nav');
        $('.contact').addClass('active-nav');
     }

@@ -31,6 +31,8 @@ gem 'autoprefixer-rails'
 gem 'mail_form', '~> 1.5.0'
 gem 'figaro', '~> 1.1.0'
 
+gem 'fastimage', '~> 1.6.8'
+
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.5.7'
 gem 's3_direct_upload'

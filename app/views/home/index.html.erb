@@ -14,6 +14,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
+
 				<% if !@about.nil? %>
 					<h2><%= @about.title %></h2>
 					<p><%= @about.description %></p>
@@ -60,8 +61,9 @@
 				<% if !@projects.nil? %>
 					<% @projects.each do |project| %>
 						<a class="modal-link" href data-toggle="modal" data-target="#myModal">
-							<div data-title="<%= project.title %>" data-description="<%= project.description %>" data-url="<%= project.link %>" class="project-thumbs">
+							<div data-title="<%= project.title %>" data-description="<%= project.description %>" data-seconddescription="<%= project.second_description %>" data-url="<%= project.link %>" class="project-thumbs">
 								<%= image_tag project.image.url(:thumb, timestamp:false) %>
+								<%= image_tag project.image.url(:original, timestamp:false), class: "lg-img" %>
 							</div>
 						</a>
 					<% end %>

@@ -99,10 +99,6 @@
 			float: none;
 			margin-right: 0;
 		}
-		img {
-			width: 200px;
-			height: 150px;
-		}
 	}
 }
 
@@ -167,6 +163,12 @@
 	}
 }
 
+#myModal {
+	img {
+		margin: 0 auto;
+	}
+}
+
 .modal-header {
 	border-bottom: 0;
 }
@@ -179,10 +181,20 @@
 
 .modal-footer {
 	border-top: 0;
+	p {
+		margin: 0 auto;
+		max-width: 500px;
+	}
+	.lang {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
 }
 
 
 .site-link {
+	margin-top:10px;
 	@media screen and(max-width: 475px) {
 		float: left;
 	}
@@ -191,6 +203,7 @@
 .mobile-btn {
 	display: none;
 	@media screen and(max-width: 475px) {
+		margin-top: 10px;
 		display: block;
 	}
 }
@@ -215,4 +228,8 @@
 .green-bg {
 	color: #000;
 	background: #acd255;
+}
+
+.lg-img {
+	display: none;
 }

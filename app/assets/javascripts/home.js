@@ -26,14 +26,32 @@ $(document).ready(function(){
 	$('.project-thumbs').click(function() {
 		var title = $(this).attr('data-title');
 		var description = $(this).attr('data-description');
+		var secondDescription = $(this).attr('data-seconddescription');
 		var url = $(this).attr('data-url');
 
+		var orgImg = $(this).find('.lg-img').attr('src');
+		var orgImgW = $(this).find('.lg-img').width();
+
 		$('.web-title').text(title);
-		$('.modal-body p').text(description);
+		var desFooter = $('.modal-footer .description').text(description);
+		var secondDesFooter = $('.modal-footer .second-description').text(secondDescription);
+
+		if(orgImgW > 200){
+			$(desFooter).show();
+			$(secondDesFooter).show();
+			$('.web-img img').attr('src', orgImg).show();
+		}else{
+			$(desFooter).hide();
+			$(secondDesFooter).hide();
+			$('.web-img img').attr('src', orgImg).hide();
+		}
+
 
 		if( url.length == 0){
 			$('.site-link').hide();
+			$('.modal-body a').css('cursor', 'default').removeAttr('href');
 		}else{
+			$('.modal-body a').css('cursor', 'pointer').attr('href', url);
 			$('.modal-footer a').attr('href', url);
 			$('.site-link').show();
 		}
