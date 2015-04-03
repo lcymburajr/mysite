@@ -13,8 +13,6 @@ $(window).resize(function(){
 
 $(document).ready(function(){
 
-	$(window).trigger('resize');
-
 	$(window).on('scroll', function(){
 		var sHight = $(window).scrollTop();
 		if (sHight > 300) {
@@ -122,3 +120,8 @@ $(document).ready(function(){
 
 	$('#myModal2').modal('show');
 });
+
+$(window).load(function(){
+	$(window).trigger('resize');
+});
+
