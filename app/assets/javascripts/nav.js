@@ -1,19 +1,4 @@
-$(window).resize(function(){
-    var wWidth = $(this).width();
-
-    var wHeight = $(this).height();
-    $('.home-section').css('height', wHeight);
-
-    if (wWidth < 768){
-        $("#navbar-collapse").addClass('mobile');
-    }else {
-        $("#navbar-collapse").removeClass('mobile');
-    }
-});
-
 $(document).ready(function(){
-
-  $(window).trigger('resize');
 
 	$('.nav-links').click(function(){
 
