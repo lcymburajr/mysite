@@ -115,18 +115,18 @@
 <%= render 'shared/modals' %>
 
 <script>
-	// $(window).resize(function(){
- //    var wWidth = $(this).width();;
+	$(window).resize(function(){
+    var wWidth = $(this).width();;
 
- //    if (wWidth < 500){
-	// 		$('body').css('background', '#000');
- //    }else {
- //      $('body').css('background', 'none');
- //    }
-	// });
+    if (wWidth < 500){
+			$('body').css('background', '#000');
+    }else {
+      $('body').css('background', 'none');
+    }
+	});
 
 	$(document).ready(function(){
 		$.backstretch("site_background.jpg");
-		// $(window).trigger('resize');
+		$(window).trigger('resize');
 	});
 </script>

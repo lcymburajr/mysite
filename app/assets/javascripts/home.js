@@ -1,20 +1,8 @@
-$(window).resize(function(){
-    var wWidth = $(this).width();
-
-    var wHeight = $(this).height();
-    $('.home-section').css('height', wHeight);
-
-    if (wWidth < 768){
-        $("#navbar-collapse").addClass('mobile');
-    }else {
-        $("#navbar-collapse").removeClass('mobile');
-    }
-});
-
 $(document).ready(function(){
 
-	 var wHeight = $(this).height();
-    $('.home-section').css('height', wHeight);
+	$('html,body').animate({
+	    	scrollTop: 0
+	 	});
 
 	$(window).on('scroll', function(){
 		var sHight = $(window).scrollTop();
@@ -123,8 +111,3 @@ $(document).ready(function(){
 
 	$('#myModal2').modal('show');
 });
-
-$(window).load(function(){
-	$(window).trigger('resize');
-});
-
