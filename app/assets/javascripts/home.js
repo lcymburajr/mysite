@@ -13,6 +13,9 @@ $(window).resize(function(){
 
 $(document).ready(function(){
 
+	 var wHeight = $(this).height();
+    $('.home-section').css('height', wHeight);
+
 	$(window).on('scroll', function(){
 		var sHight = $(window).scrollTop();
 		if (sHight > 300) {
