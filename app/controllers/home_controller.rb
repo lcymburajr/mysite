@@ -8,7 +8,7 @@ class HomeController < ApplicationController
 
     @about = About.find_by_title('ABOUT')
 
-    @languages = About.find_by_title('LANGUAGES')
+    @code = About.find_by_title('CODE')
 
     @frameworks = About.find_by_title('FRAMEWORKS')
 
