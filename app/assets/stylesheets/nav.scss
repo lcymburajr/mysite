@@ -1,6 +1,8 @@
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a, a:focus {
+  outline: none !important;
   color: #fff;
   &.active {
+    outline: none !important;
     color: #acd255 !important;
   }
 }

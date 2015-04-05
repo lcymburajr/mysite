@@ -8,18 +8,7 @@
 </div>
 
 <script>
-  $(window).resize(function(){
-    var wWidth = $(this).width();;
-
-    if (wWidth < 500){
-      $('body').css('background', '#000');
-    }else {
-      $('body').css('background', 'none');
-    }
-  });
-
-  $(document).ready(function(){
+   $(document).ready(function(){
     $.backstretch("site_background.jpg");
-    $(window).trigger('resize');
   });
 </script>
