@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Font
+=============================*/
+h1, h2, h3, h4, h5, h6
+{
+	font-family:Helvetica, Arial, sans-serif;	
+}
+
+p
+{
+	margin:0;
+	padding:0;	
+	font-family:Helvetica, Arial, sans-serif;	
+	color:#FFF;
+}
+
+/*Resets
+============================*/
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	padding:0;	
+	color:#FFF;
+}
+
+/*Structure
+============================*/
+body
+{
+	background-color:#09C;	
+	
+}
+
+#wrapper {
+	width:320px;
+	height:auto;
+	margin:0 auto;
+	padding:20px;
+	background-color:#09C;
+}
+
+#bill
+{
+	
+	width:240px;
+	height:25px;	
+	color:#999;
+	background-color:#FFF;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:20px;
+	line-height:24px;
+	padding-top:2px;	
+	
+}
+
+p tip{
+	float:left;	
+}
+
+
+#stateTax
+{
+	width:250px;
+	height:30px;	
+	color:#999;
+	background-color:#FFF;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:20px;
+	line-height:24px;
+	padding-top:2px;
+	
+}
+
+#percent
+{
+	width:250px;
+	height:30px;	
+	color:#999;
+	background-color:#FFF;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:20px;
+	line-height:24px;
+	padding-top:2px;
+	
+}
+
+#submit
+{
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:1em;
+	width:120px;
+	height:30px;
+	color:#FFF;
+	background-color:rgba(172,209,85,1);
+	border-radius:20px;
+	border:0;
+			
+}
+
+#manuel
+{
+	width:115px;
+	height:22px;	
+	color:#999;
+	background-color:#FFF;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:18px;
+	line-height:24px;
+	padding-left:2px;
+	
+}
+
+#submit:hover
+{
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:1em;
+	width:120px;
+	height:30px;
+	color:#FFF;
+	background-color:#999;
+	border-radius:20px;
+	border:0;
+	transition:ease-in;
+	transition-duration:300ms;
+			
+}
+
+#reset
+{
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:1em;
+	width:75px;
+	height:30px;
+	color:#FFF;
+	border-radius:20px;
+	border:0;
+	background:#F60;
+}
+
+#reset:hover
+{
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:1em;
+	width:75px;
+	height:30px;
+	color:#FFF;
+	border-radius:20px;
+	border:0;
+	background-color:#999;
+	transition:ease-in;
+	transition-duration:400ms;
+}	
+
+span
+{
+	color:#FFF;	
+	font-size:18px;
+}

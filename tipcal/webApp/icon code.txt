@@ -1,0 +1,10 @@
+<head>
+	<link rel="icon" type="image/png" href="appImages/kaskons32.png">
+	<link rel="icon" type="image/png" href="appImages/kaskons16.png">
+	  <meta name= viewport content= width=device-width initial-scale=1> 
+      <!--start icon-->
+	<link rel="apple-touch-icon" href="appImages/kaskons52.png" />
+	<link rel="apple-touch-icon" href="appImages/kaskons72.png" />
+	<link rel="apple-touch-icon" href="appImages/kaskons114.png" />
+      <!--end icon-->
+</head>
