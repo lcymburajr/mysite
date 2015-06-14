@@ -233,3 +233,86 @@
 .lg-img {
 	display: none;
 }
+
+// .holder {
+//   margin-top: 5px;
+// }
+// .holder a {
+//     font-size:14px;
+//     cursor:pointer;
+//     margin:0 5px;
+//     color:#000;
+// }
+// .holder a:hover {
+//     color:#fff;
+// }
+// .holder a.jp-previous {
+//     margin-right:15px;
+// }
+// .holder a.jp-next {
+//     margin-left:15px;
+//     color:#000;
+// }
+// .holder a.jp-current,a.jp-current:hover {
+//     color:#fff;
+//     font-weight:bold;
+// }
+// .holder a.jp-disabled,a.jp-disabled:hover {
+//     color:#fff;
+// }
+// .holder a.jp-current,a.jp-current:hover,.holder a.jp-disabled,a.jp-disabled:hover {
+//     cursor:default;
+//     background:none;
+// }
+// .holder span {
+//     margin: 0 5px;
+// }
+
+ .holder {
+ 	margin-top: 5px;
+ 	margin-left: 40px;
+ 	@media screen and(max-width: 475px) {
+		margin-left: 0;
+		text-align: center;
+	}
+}
+.holder a {
+    font-size:14px;
+    cursor:pointer;
+    margin:0 5px;
+    color:#333;
+}
+.holder a:hover {
+    color:#fff;
+}
+.holder a.jp-current,a.jp-current:hover {
+    color:#fff;
+    font-weight:bold;
+    cursor:default;
+    background:none;
+}
+.holder span {
+    margin:0 5px;
+}
+.customBtns {
+    position:relative;
+}
+.arrowPrev,.arrowNext {
+    width:29px;
+    height:29px;
+    position:absolute;
+    cursor:pointer;
+}
+.arrowPrev {
+    background-image: image-url('paginate/paginate_prev.png');
+    top:-25px;
+    left: 0;
+}
+.arrowNext {
+    background-image: image-url('paginate/paginate_next.png');
+    top:-25px;
+    right: 0
+}
+.arrowPrev.jp-disabled,.arrowNext.jp-disabled {
+    display: none;
+}

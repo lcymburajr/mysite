@@ -16,4 +16,5 @@
 //= require bootstrap-sprockets
 //= require s3_direct_upload
 //= require backstretch.min
+//= require jPages.min
 //= require_tree .
