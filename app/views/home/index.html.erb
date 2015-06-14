@@ -149,6 +149,7 @@
         startRange   : 1,
         midRange     : 5,
         endRange     : 1,
+        minHeight: false,
         previous    : "span.arrowPrev",
         next        : "span.arrowNext",
         callback:  function(pages) {
@@ -158,6 +159,13 @@
             $('.holder').show();
           }
         }
+    });
+
+    var target = $('#project');
+    $("div.holder a, span").click(function(){
+      $('body,html').animate({
+         scrollTop: $(target).offset().top -50
+      }, 800);
     });
 
 	});
