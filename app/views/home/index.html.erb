@@ -154,9 +154,9 @@
         next        : "span.arrowNext",
         callback:  function(pages) {
           if(pages.count == 1){
-            $('.holder').hide();
+            $('.holder, .customBtns').hide();
           }else{
-            $('.holder').show();
+            $('.holder, .customBtns').show();
           }
         }
     });
