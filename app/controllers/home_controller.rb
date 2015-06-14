@@ -14,7 +14,7 @@ class HomeController < ApplicationController
 
     @knowledge = About.find_by_title('KNOWLEDGE')
 
-    @award= About.find_by_title('AWARD')
+    @award= About.find_by_title('Award')
 
     @resume = About.find_by_title('RESUME')
 
