@@ -26,8 +26,10 @@
 					<h3><%= @code.title %></h3>
 					<p><%= @code.description %></p>
 				<% end %>
+				<% if !@frameworks.nil? %>
 					<h3><%= @frameworks.title %></h3>
 					<p><%= @frameworks.description %></p>
+				<% end %>
 				<% if !@knowledge.nil? %>
 					<h3><%= @knowledge.title %></h3>
 					<p><%= @knowledge.description %></p>
