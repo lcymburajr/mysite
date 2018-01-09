@@ -94,29 +94,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-			<h2>CONTACT</h2>
-		    <%= form_for @contact_form, url: {action: 'create'}, html: {:novalidate => true, id: 'my-form'} do |f| %>
-            <div class="form-group">
-            		<%= f.label :name, class: 'labels' %>
-                <%= f.text_field :name, class: 'form-control', placeholder: 'NAME' %>
-            </div>
-            <div class="form-group">
-            	 <%= f.label :email, class: 'labels' %>
-               <%= f.email_field :email, class: 'form-control', placeholder: 'EMAIL' %>
-            </div>
-            <div class="form-group">
-            	<%= f.label :message, class: 'labels' %>
-               <%= f.text_area :message, class: 'form-control', rows: 4, placeholder: 'MESSAGE' %>
-            </div>
-            <div class="form-group nickname">
-            		<p> Please leave this blank. </p>
-               <%= f.email_field :nickname, class: 'form-control' %>
-            </div>
-           	   <%= f.submit 'SUBMIT', class: 'btn green-bg' %>
-      	    <% end %>
-		    </div>
-		     <div class="col-sm-6 info">
-		     	<p>EMAIL: <%= mail_to 'lcymburajr@ljcdesign.com', 'lcymburajr[at]ljcdesign.com', class: 'green' %></p>
+			    <h2>CONTACT</h2>
+		        <p>EMAIL: <%= mail_to 'lcymburajr@ljcdesign.com', 'lcymburajr[at]ljcdesign.com', class: 'green' %></p>
 		     	<p>PHONE: </strong><span class="green">603-557-2917</span></p>
 		     	<%= link_to(image_tag('linkedin.png', class: 'linkedin'),'https://www.linkedin.com/pub/lawrence-j-cymbura-jr/44/876/38a', target: 'blank') %>
 		     </div>
