@@ -1,0 +1,51 @@
+{
+  "name": "mysite",
+  "scripts": {
+  },
+  "env": {
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "HEROKU_POSTGRESQL_SILVER_URL": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "MANDRILL_API_KEY": {
+      "required": true
+    },
+    "MANDRILL_USERNAME": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "S3_BUCKET_NAME": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+
+  ]
+}
