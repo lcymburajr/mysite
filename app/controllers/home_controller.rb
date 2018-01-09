@@ -10,9 +10,9 @@ class HomeController < ApplicationController
 
     @code = About.find_by_title('CODE')
 
-    @frameworks = About.find_by_title('AUTOMATION/WORKFLOWS')
+    @frameworks = About.find_by_title('AWS')
 
-    @knowledge = About.find_by_title('KNOWLEDGE')
+    @knowledge = About.find_by_title('AUTOMATION/WORKFLOWS')
 
     @award= About.find_by_title('AWARD')
 
