@@ -34,17 +34,18 @@
         <h3>DATABASE</h3>
         <p>MySQL, SQL Server, Stored Procedures, ETL, Visual Studios, Management Studios, DataGrips, LucidChart</p>
 
-        <h3>BIG DATA/ANALYTICS</h3>
-        <p>Apache Hadoop, Spark, Hive, Zeppelin, Qubole, Airflow</p>
-
-        <% if !@frameworks.nil? %>
-          <h3><%= @frameworks.title %></h3>
-          <p><%= @frameworks.description %></p>
-        <% end %>
+        <h3>BIG DATA</h3>
+        <p>Hadoop, Spark, Hive, Zeppelin, Qubole, Airflow</p>
 
         <% if !@knowledge.nil? %>
           <h3><%= @knowledge.title %></h3>
           <p><%= @knowledge.description %></p>
+        <% end %>
+
+
+        <% if !@frameworks.nil? %>
+          <h3><%= @frameworks.title %></h3>
+          <p><%= @frameworks.description %></p>
         <% end %>
 
 					<h3>CERTIFICATION</h3>
